@@ -14,7 +14,7 @@ function TimelineFlow() {
       className="absolute left-[17px] top-0 bottom-0 w-px overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
+      transition={{ duration: 0.35, delay: 0.1 }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-[#3D6B8C] via-[#7A8A94] via-[#B1D2C8] to-transparent" />
       <motion.div
@@ -27,7 +27,7 @@ function TimelineFlow() {
 }
 
 export function Experience() {
-  const { ref, visible } = useInView();
+  const { ref, visible } = useInView({ rootMargin: "0px 0px 400px 0px" });
 
   return (
     <section id="experience" ref={ref} className="section-padding relative">
@@ -38,7 +38,7 @@ export function Experience() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="section-heading"
         >
           <span className="section-label">/* experience */</span>
@@ -57,7 +57,7 @@ export function Experience() {
                 key={i}
                 initial={{ opacity: 0, x: -30 }}
                 animate={visible ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.3 + i * 0.15 }}
+                transition={{ duration: 0.3, delay: 0.15 + i * 0.1 }}
                 className="relative pl-14"
               >
                 <div

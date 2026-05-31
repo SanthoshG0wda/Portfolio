@@ -7,7 +7,7 @@ import { SectionGlow } from "@/components/ui/SectionGlow";
 
 export function Projects() {
   const [filter, setFilter] = useState("all");
-  const { ref, visible } = useInView();
+  const { ref, visible } = useInView({ rootMargin: "0px 0px 400px 0px" });
 
   const filtered =
     filter === "all" ? projects : projects.filter((p) => p.category === filter);
@@ -21,7 +21,7 @@ export function Projects() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="section-heading"
         >
           <span className="section-label">/* projects */</span>
@@ -68,7 +68,7 @@ export function Projects() {
                     : { opacity: 0, scale: 0.95 }
                 }
                 exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.35, delay: 0.15 + i * 0.06 }}
+                transition={{ duration: 0.3, delay: 0.08 + i * 0.04 }}
                 whileHover={{ scale: 1.02, y: -6 }}
                 whileTap={{ scale: 0.98 }}
                 className="glass rounded-xl p-7 hover-lift glow-cyan transition-all duration-300 group h-full"

@@ -39,7 +39,7 @@ const contactInfo = [
 ];
 
 export function Contact() {
-  const { ref, visible } = useInView();
+  const { ref, visible } = useInView({ rootMargin: "0px 0px 400px 0px" });
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -78,7 +78,7 @@ export function Contact() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="section-heading"
         >
           <span className="section-label">/* contact */</span>
@@ -92,7 +92,7 @@ export function Contact() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            transition={{ duration: 0.35, delay: 0.1 }}
             className="md:col-span-2 space-y-4"
           >
             {contactInfo.map((info) => (
@@ -136,7 +136,7 @@ export function Contact() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.25 }}
+            transition={{ duration: 0.35, delay: 0.15 }}
             className="md:col-span-3"
           >
             <div className="glass rounded-2xl p-8 glow-cyan">

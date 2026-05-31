@@ -4,7 +4,7 @@ import { SectionGlow } from "@/components/ui/SectionGlow";
 import { Cpu } from "lucide-react";
 
 export function Services() {
-  const { ref, visible } = useInView();
+  const { ref, visible } = useInView({ rootMargin: "0px 0px 400px 0px" });
 
   const services = [
     {
@@ -24,7 +24,7 @@ export function Services() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="section-heading"
         >
           <span className="section-label">/* services */</span>
@@ -40,7 +40,7 @@ export function Services() {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               animate={visible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
+              transition={{ duration: 0.3, delay: 0.08 + i * 0.06 }}
               whileHover={{ scale: 1.02, y: -6 }}
               whileTap={{ scale: 0.98 }}
               className="glass rounded-xl p-6 hover-lift glow-cyan transition-all duration-300"

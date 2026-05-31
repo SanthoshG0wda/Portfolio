@@ -11,7 +11,7 @@ const statusIcons = {
 };
 
 export function Certifications() {
-  const { ref, visible } = useInView();
+  const { ref, visible } = useInView({ rootMargin: "0px 0px 400px 0px" });
 
   return (
     <section id="certifications" ref={ref} className="section-padding relative">
@@ -22,7 +22,7 @@ export function Certifications() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="section-heading"
         >
           <span className="section-label">/* certifications */</span>
@@ -40,7 +40,7 @@ export function Certifications() {
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={visible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.15 + i * 0.08 }}
+                transition={{ duration: 0.3, delay: 0.08 + i * 0.05 }}
                 whileHover={{ scale: 1.02, y: -6 }}
                 whileTap={{ scale: 0.98 }}
                 className="glass rounded-xl p-5 hover-lift glow-cyan transition-all duration-300 flex items-center gap-4"

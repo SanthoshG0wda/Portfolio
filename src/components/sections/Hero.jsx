@@ -19,7 +19,7 @@ export function Hero() {
   const typedText = useTypingAnimation({ texts: typingTexts, typeSpeed: 50 });
   const { displayed: typedIntro, isComplete } = useTypewriter(introText, {
     speed: 18,
-    startDelay: 600,
+    startDelay: 200,
   });
 
   return (
@@ -60,7 +60,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
             className="inline-flex items-center gap-2 mb-6 px-5 py-2.5 glass-strong rounded-full text-xs uppercase tracking-[0.2em] text-[#3D6B8C]"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#B1D2C8] animate-pulse-glow" />
@@ -70,7 +70,7 @@ export function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.4, delay: 0.05 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 leading-tight"
           >
             <span className="text-white/90">Santhosh Gowda M</span>
@@ -79,7 +79,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             className="text-base md:text-lg text-gray-400 mb-4 leading-relaxed"
           >
             ML Engineer <span className="text-white/40">|</span> LLM Developer{" "}
@@ -89,7 +89,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.4, delay: 0.15 }}
             className="mb-6"
           >
             <p className="text-sm md:text-base text-gray-400 leading-relaxed min-h-[4.5rem]">
@@ -103,7 +103,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.35 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="inline-flex items-center gap-3 px-4 py-2 terminal-card mb-8"
           >
             <Cpu size={12} className="text-[#B1D2C8]" />
@@ -115,7 +115,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.25 }}
             className="flex gap-4 flex-wrap mb-8"
           >
             <motion.a
@@ -141,7 +141,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
             className="flex items-center gap-4"
           >
             {[

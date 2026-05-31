@@ -18,7 +18,7 @@ const focusAreas = [
 ];
 
 export function About() {
-  const { ref, visible } = useInView();
+  const { ref, visible } = useInView({ rootMargin: "0px 0px 400px 0px" });
 
   return (
     <section id="about" ref={ref} className="section-padding relative">
@@ -29,7 +29,7 @@ export function About() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={visible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="section-heading"
         >
           <span className="section-label">/* about */</span>
@@ -43,7 +43,7 @@ export function About() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            transition={{ duration: 0.35, delay: 0.15 }}
             className="lg:col-span-3 space-y-6"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-xs border border-[#3D6B8C]/15">
@@ -91,7 +91,7 @@ export function About() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={visible ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.25 }}
+            transition={{ duration: 0.35, delay: 0.2 }}
             className="lg:col-span-2 grid grid-cols-2 gap-4"
           >
             {highlights.map((h, i) => (
@@ -99,7 +99,7 @@ export function About() {
                 key={h.label}
                 initial={{ opacity: 0, y: 15 }}
                 animate={visible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
+                transition={{ duration: 0.3, delay: 0.15 + i * 0.06 }}
                 whileHover={{ scale: 1.02, y: -6 }}
                 whileTap={{ scale: 0.98 }}
                 className="glass rounded-xl p-5 text-center hover-lift glow-cyan transition-all duration-300 cursor-default"

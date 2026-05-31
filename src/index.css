@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -79,6 +83,7 @@
 
   .section-padding {
     @apply py-24 md:py-32 px-6;
+    scroll-margin-top: 80px;
   }
 
   .section-heading {

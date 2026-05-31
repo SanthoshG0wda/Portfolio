@@ -29,9 +29,9 @@ export function Navbar() {
   }, []);
 
   const scrollTo = (id) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
-    setActive(id);
     setMobileOpen(false);
+    setActive(id);
+    window.location.hash = id.toLowerCase();
   };
 
   return (
@@ -110,10 +110,10 @@ export function Navbar() {
           >
             <div className="px-6 py-4 flex flex-col gap-2">
               {navItems.map((item) => (
-                <motion.button
+                <button
                   key={item}
+                  type="button"
                   onClick={() => scrollTo(item)}
-                  whileTap={{ scale: 0.95 }}
                   className={cn(
                     "text-left px-4 py-3 rounded-lg text-sm tracking-widest uppercase transition-all",
                     active === item
@@ -122,7 +122,7 @@ export function Navbar() {
                   )}
                 >
                   {item}
-                </motion.button>
+                </button>
               ))}
             </div>
           </motion.div>

@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 
-export function useInView({ threshold = 0.1, once = true } = {}) {
+export function useInView({ threshold = 0.1, once = true, rootMargin = "0px" } = {}) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -16,11 +16,11 @@ export function useInView({ threshold = 0.1, once = true } = {}) {
           setVisible(false);
         }
       },
-      { threshold }
+      { threshold, rootMargin }
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [threshold, once]);
+  }, [threshold, once, rootMargin]);
 
   return { ref, visible };
 }
