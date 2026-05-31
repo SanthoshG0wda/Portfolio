@@ -7,7 +7,7 @@ export const experiences = [
     tag: "VithAI",
     color: "#7A8A94",
     points: [
-      "Developed and deployed a text classification pipeline using DistilBERT, achieving 94% F1-score on production data",
+      "Developing an AI powered Placement training assistant that provides personalized guidance to students based on their skills and goals",
       "Built automated data preprocessing workflows with Pandas, NumPy, and custom PyTorch Dataset classes",
       "Created REST APIs with FastAPI to serve ML models, handling 10K+ daily inference requests",
     ],
