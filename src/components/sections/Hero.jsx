@@ -25,10 +25,12 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center px-6 overflow-hidden"
+      className="relative min-h-screen lg:flex lg:items-center px-6 overflow-hidden"
     >
+      <div className="absolute inset-0 bg-[#1A2332]" />
+
       <div
-        className="absolute inset-0 z-[1]"
+        className="absolute inset-0 z-[1] hidden lg:block"
         style={{
           backgroundImage: "url(/Gemini_Generated_Image_f1y4ygf1y4ygfGemini_Generated_Image_f2q8mrf2q8mrf2q81y4-clean.png)",
           backgroundPosition: "calc(100% + 200px) center",
@@ -38,14 +40,23 @@ export function Hero() {
       />
 
       <div
-        className="absolute inset-0 z-[2]"
+        className="absolute inset-0 z-[2] hidden lg:block"
         style={{
-          background: "linear-gradient(to right, #1A2332 0%, #1A2332 30%, #1A2332 40%, transparent 60%)",
+          background: "linear-gradient(to right, #1A2332 0%, #1A2332 40%, transparent 60%)",
         }}
       />
 
       <div className="relative z-20 w-full max-w-7xl mx-auto">
-        <div className="w-full lg:w-[55%]">
+        <div className="lg:hidden relative w-[calc(100%+3rem)] -ml-6 h-[40vh] min-h-[300px] overflow-hidden">
+          <img
+            src="/Gemini_Generated_Image_f1y4ygf1y4ygfGemini_Generated_Image_f2q8mrf2q8mrf2q81y4-clean.png"
+            alt="Santhosh Gowda M"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/20 to-[#1A2332]" />
+        </div>
+        <div className="w-full lg:w-[55%] lg:py-0 py-8">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
