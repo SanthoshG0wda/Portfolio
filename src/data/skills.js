@@ -1,0 +1,52 @@
+export const skillCategories = [
+  {
+    title: "Programming",
+    skills: ["Python", "Rust","JavaScript", "SQL", "Bash"],
+    color: "#3D6B8C",
+    icon: "\uD83D\uDD24",
+  },
+  {
+    title: "ML & AI Frameworks",
+    skills: [
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
+      "Hugging Face",
+      "LangChain",
+      "LlamaIndex",
+      "ONNX",
+    ],
+    color: "#7A8A94",
+    icon: "\uD83E\uDDE0",
+  },
+  {
+    title: "ML Concepts & Techniques",
+    skills: [
+      "Supervised & Unsupervised Learning",
+      "NLP & LLMs",
+      "RAG & Vector Search",
+      "Model Fine-tuning",
+      "Transformer Architectures",
+      "Computer Vision",
+      "Model Quantization",
+      "Experiment Tracking",
+    ],
+    color: "#B1D2C8",
+    icon: "\uD83D\uDCD8",
+  },
+  {
+    title: "Tools & Platforms",
+    skills: [
+      "Docker",
+      "Git & GitHub",
+      "VS Code",
+      "Linux",
+      "MLflow",
+      "Weights & Biases",
+      "FastAPI",
+      "Postman",
+    ],
+    color: "#F59E0B",
+    icon: "\u2699\uFE0F",
+  },
+];
