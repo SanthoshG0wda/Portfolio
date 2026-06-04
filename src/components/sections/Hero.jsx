@@ -147,7 +147,7 @@ export function Hero() {
             className="flex items-center gap-4"
           >
             {[
-              { href: "https://github.com/G0wda", icon: Github, label: "GitHub" },
+              { href: "https://github.com/SanthsohG0wda", icon: Github, label: "GitHub" },
               { href: "https://linkedin.com/in/santhosh-gowda", icon: Linkedin, label: "LinkedIn" },
               { href: "mailto:santhoshgowda9542@gmail.com", icon: Mail, label: "Email" },
             ].map(({ href, icon: Icon, label }) => (
