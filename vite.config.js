@@ -5,7 +5,6 @@ import autoprefixer from "autoprefixer";
 import path from "path";
 
 export default defineConfig({
-  base: "/Portfolio/",
   plugins: [react()],
   css: {
     postcss: {
