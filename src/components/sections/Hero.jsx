@@ -3,6 +3,8 @@ import { Github, Linkedin, Mail, ArrowRight, Cpu } from "lucide-react";
 import { useTypingAnimation } from "@/hooks/useTypingAnimation";
 import { useTypewriter } from "@/hooks/useTypewriter";
 
+const heroBg = `${import.meta.env.BASE_URL}Gemini_Generated_Image_f1y4ygf1y4ygfGemini_Generated_Image_f2q8mrf2q8mrf2q81y4-clean.png`;
+
 const typingTexts = [
   "Machine Learning",
   "Deep Learning",
@@ -32,7 +34,7 @@ export function Hero() {
       <div
         className="absolute inset-0 z-[1] hidden lg:block"
         style={{
-          backgroundImage: "url(/Gemini_Generated_Image_f1y4ygf1y4ygfGemini_Generated_Image_f2q8mrf2q8mrf2q81y4-clean.png)",
+          backgroundImage: `url(${heroBg})`,
           backgroundPosition: "calc(100% + 200px) center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -49,7 +51,7 @@ export function Hero() {
       <div className="relative z-20 w-full max-w-7xl mx-auto">
         <div className="lg:hidden relative w-[calc(100%+3rem)] -ml-6 h-[40vh] min-h-[300px] overflow-hidden">
           <img
-            src="/Gemini_Generated_Image_f1y4ygf1y4ygfGemini_Generated_Image_f2q8mrf2q8mrf2q81y4-clean.png"
+            src={heroBg}
             alt="Santhosh Gowda M"
             className="w-full h-full object-cover"
           />
@@ -145,7 +147,7 @@ export function Hero() {
             className="flex items-center gap-4"
           >
             {[
-              { href: "https://github.com/G0wda", icon: Github, label: "GitHub" },
+              { href: "https://github.com/SanthsohG0wda", icon: Github, label: "GitHub" },
               { href: "https://linkedin.com/in/santhosh-gowda", icon: Linkedin, label: "LinkedIn" },
               { href: "mailto:santhoshgowda9542@gmail.com", icon: Mail, label: "Email" },
             ].map(({ href, icon: Icon, label }) => (
