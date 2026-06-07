@@ -33,7 +33,7 @@ const contactInfo = [
     icon: Linkedin,
     label: "LinkedIn",
     value: "@santhosh-gowda",
-    href: "https://linkedin.com/in/santhosh-gowda",
+    href: "https://linkedin.com/in/santhosh-gowda-m",
     color: "#F59E0B",
   },
 ];
