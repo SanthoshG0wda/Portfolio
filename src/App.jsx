@@ -18,6 +18,8 @@ import { Achievements } from "@/components/sections/Achievements";
 import { Certifications } from "@/components/sections/Certifications";
 import { Contact } from "@/components/sections/Contact";
 
+
+
 export default function App() {
   return (
     <ThemeProvider>
