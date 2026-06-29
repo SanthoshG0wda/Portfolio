@@ -19,6 +19,7 @@
 
   body {
     @apply bg-cyber-dark text-white/90 font-sans overflow-x-hidden;
+    font-size: 18px;
   }
 
   ::selection {
@@ -91,7 +92,7 @@
   }
 
   .section-label {
-    @apply inline-block text-[10px] tracking-[0.3em] uppercase text-gray-500 mb-3 font-mono;
+    @apply inline-block text-xs tracking-[0.3em] uppercase text-gray-500 mb-3 font-mono;
   }
 
   .section-title {

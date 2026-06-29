@@ -32,12 +32,12 @@ export default function App() {
           <Hero />
           <About />
           <Experience />
-          <Education />
+          {/* <Education /> */}
           <Skills />
           <Services />
           <Projects />
-          <Achievements />
-          <Certifications />
+          {/* <Achievements /> */}
+          {/* <Certifications /> */}
           <Contact />
         </main>
         <Footer />

@@ -44,18 +44,18 @@ export function Education() {
                 </span>
                 <GraduationCap size={16} style={{ color: edu.color }} />
               </div>
-              <h3 className="text-white font-bold text-sm mb-1 leading-relaxed">
+              <h3 className="text-white font-bold text-base mb-1 leading-relaxed">
                 {edu.degree}
               </h3>
               <p className="text-gray-500 text-xs mb-2">{edu.school}</p>
               {edu.specialization && (
-                <p className="text-[11px] text-gray-600 mb-3 font-mono">
+                <p className="text-xs text-gray-600 mb-3 font-mono">
                   Specialization: {edu.specialization}
                 </p>
               )}
               <div className="flex items-center gap-2 pt-2 border-t border-white/5">
                 <Award size={14} style={{ color: edu.color }} />
-                <span className="text-sm font-semibold" style={{ color: edu.color }}>
+                <span className="text-base font-semibold" style={{ color: edu.color }}>
                   {edu.cgpa}
                 </span>
               </div>

@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Brain, Cpu, Layers, Database } from "lucide-react";
+import { Brain, Cpu, Layers, Database, Zap, Award, Monitor } from "lucide-react";
 import { useInView } from "@/hooks/useInView";
 import { SectionGlow } from "@/components/ui/SectionGlow";
 
 const highlights = [
-  { label: "Projects", value: "4+", icon: "\u26A1", desc: "ML & LLM solutions" },
-  { label: "Certifications", value: "4+", icon: "\uD83C\uDFC5", desc: "Industry-recognized credentials" },
-  { label: "Hackathons", value: "3+", icon: "\uD83E\uDDE0", desc: "AI/ML competitions" },
-  { label: "Languages", value: "6", icon: "\uD83D\uDCBB", desc: "Programming & scripting" },
+  { label: "Projects", value: "4+", icon: <Zap size={28} />, desc: "ML & LLM solutions" },
+  { label: "Certifications", value: "4+", icon: <Award size={28} />, desc: "Industry-recognized credentials" },
+  { label: "Hackathons", value: "3+", icon: <Brain size={28} />, desc: "AI/ML competitions" },
+  { label: "Languages", value: "6", icon: <Monitor size={28} />, desc: "Programming & scripting" },
 ];
 
 const focusAreas = [
@@ -34,7 +34,7 @@ export function About() {
         >
           <span className="section-label">/* about */</span>
           <h2 className="section-title">About Me</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm">
+          <p className="text-gray-500 max-w-xl mx-auto text-base">
             Aspiring ML Engineer passionate about building intelligent systems with LLMs and deep learning
           </p>
         </motion.div>
@@ -66,7 +66,7 @@ export function About() {
               intelligent applications that solve real-world problems.
             </p>
 
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-base leading-relaxed">
               Currently pursuing B.E in Computer Science Engineering{" "}
               <span className="text-white/60">(AI & Machine Learning)</span> at
               Alva&apos;s Institute of Engineering and Technology. Actively contributing to
@@ -82,7 +82,7 @@ export function About() {
                   className="flex items-center gap-2 px-3 py-2 border border-white/5 rounded-lg cursor-default"
                 >
                   <area.icon size={14} style={{ color: area.color }} />
-                  <span className="text-[11px] text-gray-400">{area.label}</span>
+                  <span className="text-xs text-gray-400">{area.label}</span>
                 </motion.div>
               ))}
             </div>
@@ -104,12 +104,12 @@ export function About() {
                 whileTap={{ scale: 0.98 }}
                 className="glass rounded-xl p-5 text-center hover-lift glow-cyan transition-all duration-300 cursor-default"
               >
-                <div className="text-2xl mb-2">{h.icon}</div>
+                <div className="mb-4">{h.icon}</div>
                 <div className="text-2xl font-bold text-gradient mb-1">{h.value}</div>
-                <div className="text-[11px] text-gray-500 uppercase tracking-wider">
+                <div className="text-xs text-gray-500 uppercase tracking-wider">
                   {h.label}
                 </div>
-                <div className="text-[9px] text-gray-600 mt-1">{h.desc}</div>
+                <div className="text-[11px] text-gray-600 mt-1">{h.desc}</div>
               </motion.div>
             ))}
           </motion.div>

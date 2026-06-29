@@ -13,7 +13,7 @@ const contactInfo = [
     icon: Mail,
     label: "Email",
     value: "santhoshgowda9542@gmail.com",
-    href: "mailto:santhoshgowda9542@gmail.com",
+    href: "mailto:santhoshmgowda@zohomail.in",
     color: "#3D6B8C",
   },
   {
@@ -26,15 +26,15 @@ const contactInfo = [
   {
     icon: Github,
     label: "GitHub",
-    value: "@G0wda",
-    href: "https://github.com/G0wda",
+    value: "@SanthoshG0wda",
+    href: "https://github.com/SanthoshG0wda",
     color: "#B1D2C8",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
     value: "@santhosh-gowda",
-    href: "https://linkedin.com/in/santhosh-gowda",
+    href: "https://linkedin.com/in/santhosh-gowda-m",
     color: "#F59E0B",
   },
 ];
@@ -84,7 +84,7 @@ export function Contact() {
         >
           <span className="section-label">/* contact */</span>
           <h2 className="section-title">Get In Touch</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm">
+          <p className="text-gray-500 max-w-xl mx-auto text-base">
             Let&apos;s connect and build a secure future together
           </p>
         </motion.div>
@@ -113,10 +113,10 @@ export function Contact() {
                   <info.icon size={16} style={{ color: info.color }} />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider">
+                  <p className="text-xs text-gray-500 uppercase tracking-wider">
                     {info.label}
                   </p>
-                  <p className="text-sm text-white group-hover:text-[#3D6B8C] transition-colors truncate">
+                  <p className="text-base text-white group-hover:text-[#3D6B8C] transition-colors truncate">
                     {info.value}
                   </p>
                 </div>
@@ -128,8 +128,8 @@ export function Contact() {
                 <MapPin size={16} className="text-[#B1D2C8]" />
               </div>
               <div>
-                <p className="text-[10px] text-gray-500 uppercase tracking-wider">Location</p>
-                <p className="text-sm text-white">India</p>
+                <p className="text-xs text-gray-500 uppercase tracking-wider">Location</p>
+                <p className="text-base text-white">Bangalore</p>
               </div>
             </div>
           </motion.div>
@@ -143,9 +143,9 @@ export function Contact() {
             <div className="glass rounded-2xl p-8 glow-cyan">
               {submitted ? (
                 <div className="text-center py-12">
-                  <div className="text-4xl mb-4">{"\u2709\uFE0F"}</div>
+                  <Mail size={48} className="text-[#3D6B8C] mb-4" />
                   <h3 className="text-xl font-bold text-white mb-2">Message Sent!</h3>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-gray-400 text-base">
                     Thank you for reaching out. I&apos;ll get back to you soon.
                   </p>
                 </div>

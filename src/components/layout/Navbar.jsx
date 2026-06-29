@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
 import { cn } from "@/lib/utils";
 
-const navItems = ["About", "Experience", "Skills", "Projects", "Achievements", "Contact"];
+const navItems = ["About", "Experience", "Skills", "Services", "Projects", /*"Achievements"*/, "Contact"];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -52,7 +51,7 @@ export function Navbar() {
           className="text-xl font-bold text-gradient tracking-wider"
           aria-label="Scroll to top"
         >
-          {"<SG />"}
+         
         </motion.button>
 
         <div className="hidden md:flex items-center gap-1">
@@ -75,13 +74,9 @@ export function Navbar() {
               )}
             </motion.button>
           ))}
-          <div className="ml-3 pl-3 border-l border-white/10">
-            <ThemeToggle />
-          </div>
         </div>
 
         <div className="flex md:hidden items-center gap-3">
-          <ThemeToggle />
           <motion.button
             onClick={() => setMobileOpen(!mobileOpen)}
             whileHover={{ scale: 1.1 }}

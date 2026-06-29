@@ -8,7 +8,7 @@ export function Footer() {
           <Shield size={12} />
           <span>Secured with cybersecurity passion</span>
         </div>
-        <p className="text-gray-600 text-[11px] font-mono flex items-center gap-1">
+        <p className="text-gray-600 text-xs font-mono flex items-center gap-1">
           Built with <Heart size={10} className="text-[#B1D2C8]" /> by{" "}
           <span className="text-gradient font-bold">Santhosh Gowda</span> &copy;{" "}
           {new Date().getFullYear()}

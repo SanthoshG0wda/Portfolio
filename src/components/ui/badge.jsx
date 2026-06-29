@@ -13,7 +13,7 @@ const Badge = forwardRef(function Badge({ className, variant = "default", ...pro
     <span
       ref={ref}
       className={cn(
-        "inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider border",
+        "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider border",
         styles[variant],
         className
       )}

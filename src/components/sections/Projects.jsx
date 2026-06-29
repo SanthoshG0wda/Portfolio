@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Bot, BarChart, Wrench } from "lucide-react";
 import { projects, projectCategories } from "@/data/projects";
 import { useInView } from "@/hooks/useInView";
 import { cn } from "@/lib/utils";
 import { SectionGlow } from "@/components/ui/SectionGlow";
+
+const projectIcons = { Bot, BarChart, Wrench };
 
 export function Projects() {
   const [filter, setFilter] = useState("all");
@@ -26,7 +29,7 @@ export function Projects() {
         >
           <span className="section-label">/* projects */</span>
           <h2 className="section-title">Projects</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm">
+          <p className="text-gray-500 max-w-xl mx-auto text-base">
             Real-world cybersecurity solutions and tools
           </p>
         </motion.div>
@@ -76,10 +79,10 @@ export function Projects() {
               >
                 <div className="flex items-start gap-4 h-full">
                   <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center text-xl shrink-0 transition-transform duration-300 group-hover:scale-110"
+                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
                     style={{ background: `${p.color}15` }}
                   >
-                    {p.icon}
+                    {(() => { const ProjIcon = projectIcons[p.icon]; return ProjIcon ? <ProjIcon size={24} style={{ color: p.color }} /> : null; })()}
                   </div>
                   <div className="min-w-0 flex-1 flex flex-col">
                     <h3 className="text-lg font-bold text-white mb-2 group-hover:text-gradient transition-all duration-300">
@@ -89,7 +92,7 @@ export function Projects() {
                       {p.tech.map((t) => (
                         <span
                           key={t}
-                          className="text-[10px] px-2 py-0.5 rounded-md border uppercase tracking-wider"
+                          className="text-xs px-2 py-0.5 rounded-md border uppercase tracking-wider"
                           style={{
                             borderColor: `${p.color}25`,
                             color: p.color,
@@ -100,7 +103,7 @@ export function Projects() {
                         </span>
                       ))}
                     </div>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                    <p className="text-gray-400 text-base leading-relaxed mb-4 flex-1">
                       {p.desc}
                     </p>
                     <div className="space-y-1">

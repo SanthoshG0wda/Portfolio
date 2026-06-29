@@ -27,7 +27,7 @@ export function Certifications() {
         >
           <span className="section-label">/* certifications */</span>
           <h2 className="section-title">Certifications</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm">
+          <p className="text-gray-500 max-w-xl mx-auto text-base">
             Industry-recognized credentials and professional development
           </p>
         </motion.div>
@@ -52,7 +52,7 @@ export function Certifications() {
                   <Shield size={20} style={{ color: c.color }} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-white text-sm font-medium leading-relaxed mb-1">
+                  <h3 className="text-white text-base font-medium leading-relaxed mb-1">
                     {c.title}
                   </h3>
                   <div className="flex items-center gap-2">
@@ -60,7 +60,7 @@ export function Certifications() {
                       <StatusIcon size={10} className="mr-1 inline" />
                       {c.status}
                     </Badge>
-                    <span className="text-[10px] text-gray-600 font-mono">
+                    <span className="text-xs text-gray-600 font-mono">
                       {c.provider}
                     </span>
                   </div>

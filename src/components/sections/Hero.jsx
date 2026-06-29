@@ -109,8 +109,8 @@ export function Hero() {
             className="inline-flex items-center gap-3 px-4 py-2 terminal-card mb-8"
           >
             <Cpu size={12} className="text-[#B1D2C8]" />
-            <span className="text-[11px] text-gray-500 font-mono">$ ./skills.sh</span>
-            <span className="text-sm text-[#3D6B8C] font-mono">{typedText}</span>
+            <span className="text-xs text-gray-500 font-mono">$ ./skills.sh</span>
+            <span className="text-base text-[#3D6B8C] font-mono">{typedText}</span>
             <span className="w-0.5 h-4 bg-[#3D6B8C] animate-blink" />
           </motion.div>
 

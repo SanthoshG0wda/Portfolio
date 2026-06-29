@@ -3,7 +3,7 @@ export const skillCategories = [
     title: "Programming",
     skills: ["Python", "Rust","JavaScript", "SQL", "Bash"],
     color: "#3D6B8C",
-    icon: "\uD83D\uDD24",
+    icon: "Code",
   },
   {
     title: "ML & AI Frameworks",
@@ -17,7 +17,7 @@ export const skillCategories = [
       "ONNX",
     ],
     color: "#7A8A94",
-    icon: "\uD83E\uDDE0",
+    icon: "Brain",
   },
   {
     title: "ML Concepts & Techniques",
@@ -32,7 +32,7 @@ export const skillCategories = [
       "Experiment Tracking",
     ],
     color: "#B1D2C8",
-    icon: "\uD83D\uDCD8",
+    icon: "BookOpen",
   },
   {
     title: "Tools & Platforms",
@@ -47,6 +47,6 @@ export const skillCategories = [
       "Postman",
     ],
     color: "#F59E0B",
-    icon: "\u2699\uFE0F",
+    icon: "Settings",
   },
 ];

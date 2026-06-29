@@ -1,17 +1,34 @@
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 import { SectionGlow } from "@/components/ui/SectionGlow";
-import { Cpu } from "lucide-react";
+import { Bot, Workflow, Puzzle } from "lucide-react";
 
 export function Services() {
   const { ref, visible } = useInView({ rootMargin: "0px 0px 400px 0px" });
 
-  const services = [
-    {
-      title: "ML Model Development",
-      desc: "Coming soon — placeholder for service description",
-      icon: <Cpu size={24} />,
+  const services = [{
+      title: "Customized AI Agents",
+      desc: "Tailored AI agents designed for specific business needs — from customer support bots to autonomous research assistants, fine-tuned for accuracy and reliability.",
+      icon: <Bot size={24} />,
       color: "#3D6B8C",
+    },
+    {
+      title: "Customized AI Agents",
+      desc: "Tailored AI agents designed for specific business needs — from customer support bots to autonomous research assistants, fine-tuned for accuracy and reliability.",
+      icon: <Bot size={24} />,
+      color: "#3D6B8C",
+    },
+    {
+      title: "Agentic Workflows",
+      desc: "Orchestrate multi-step AI pipelines where agents plan, reason, and execute tasks autonomously using tools, memory, and LLM coordination.",
+      icon: <Workflow size={24} />,
+      color: "#7A8A94",
+    },
+    {
+      title: "AI Integration & Automation",
+      desc: "Seamlessly integrate LLM-powered capabilities into existing systems — API wrappers, RAG pipelines, and automated decision-making workflows.",
+      icon: <Puzzle size={24} />,
+      color: "#B1D2C8",
     },
   ];
 
@@ -29,8 +46,8 @@ export function Services() {
         >
           <span className="section-label">/* services */</span>
           <h2 className="section-title">Services</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm">
-            Professional ML engineering services — details coming soon
+          <p className="text-gray-500 max-w-xl mx-auto text-base">
+            Specialized AI development services — from agents to production
           </p>
         </motion.div>
 
@@ -52,7 +69,7 @@ export function Services() {
                 {svc.icon}
               </div>
               <h3 className="text-base font-bold text-white mb-2">{svc.title}</h3>
-              <p className="text-gray-500 text-sm">{svc.desc}</p>
+              <p className="text-gray-500 text-base">{svc.desc}</p>
             </motion.div>
           ))}
         </div>

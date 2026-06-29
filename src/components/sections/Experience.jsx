@@ -43,7 +43,7 @@ export function Experience() {
         >
           <span className="section-label">/* experience */</span>
           <h2 className="section-title">Experience</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm">
+          <p className="text-gray-500 max-w-xl mx-auto text-base">
             Professional journey in ML engineering and AI research
           </p>
         </motion.div>
@@ -76,11 +76,11 @@ export function Experience() {
                   className="glass rounded-xl p-6 hover-lift glow-cyan transition-all duration-300"
                 >
                   <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
-                    <span className="text-[11px] text-gray-500 uppercase tracking-widest font-mono">
+                    <span className="text-xs text-gray-500 uppercase tracking-widest font-mono">
                       {exp.period}
                     </span>
                     <span
-                      className="text-[10px] font-bold px-2.5 py-1 rounded flex items-center gap-1"
+                      className="text-xs font-bold px-2.5 py-1 rounded flex items-center gap-1"
                       style={{ background: `${exp.color}18`, color: exp.color }}
                     >
                       <Cpu size={10} />
@@ -88,12 +88,12 @@ export function Experience() {
                     </span>
                   </div>
                   <h3 className="text-lg font-bold text-white mb-1">{exp.role}</h3>
-                  <p className="text-sm mb-3" style={{ color: exp.color }}>
+                  <p className="text-base mb-3" style={{ color: exp.color }}>
                     {exp.company}
                   </p>
                   <ul className="space-y-2">
                     {exp.points.map((pt, j) => (
-                      <li key={j} className="text-gray-400 text-sm flex gap-2">
+                      <li key={j} className="text-gray-400 text-base flex gap-2">
                         <span className="mt-0.5 shrink-0" style={{ color: exp.color }}>
                           ▸
                         </span>

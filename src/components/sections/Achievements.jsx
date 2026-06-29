@@ -41,16 +41,16 @@ export function Achievements() {
                 <div className="w-12 h-12 rounded-xl bg-[#3D6B8C]/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Icon size={22} className="text-[#3D6B8C]" />
                 </div>
-                <h3 className="text-white font-bold text-sm mb-2 leading-relaxed">
+                <h3 className="text-white font-bold text-base mb-2 leading-relaxed">
                   {a.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{a.desc}</p>
+                <p className="text-gray-400 text-base leading-relaxed">{a.desc}</p>
                 {a.details && (
                   <div className="flex flex-wrap justify-center gap-2 mt-3">
                     {a.details.map((d, j) => (
                       <span
                         key={j}
-                        className="text-[10px] px-2 py-0.5 rounded border border-[#3D6B8C]/15 text-[#3D6B8C]"
+                        className="text-xs px-2 py-0.5 rounded border border-[#3D6B8C]/15 text-[#3D6B8C]"
                       >
                         {d}
                       </span>

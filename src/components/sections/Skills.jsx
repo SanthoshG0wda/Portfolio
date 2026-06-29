@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import {
   Code, Database, Terminal, FileCode, Cpu, Brain, Bot, Search, Eye, Network,
   GitBranch, Box, Server, BarChart, LineChart, Globe, Workflow, BookOpen,
-  Layers, Sliders, Container,
+  Layers, Sliders, Container, Settings,
 } from "lucide-react";
 import { skillCategories } from "@/data/skills";
 import { useInView } from "@/hooks/useInView";
@@ -20,6 +20,10 @@ const skillIcons = {
   "Model Quantization": Cpu, "Experiment Tracking": BarChart,
   Docker: Container, "Git & GitHub": GitBranch, "VS Code": Code, Linux: Terminal,
   MLflow: LineChart, "Weights & Biases": BarChart, FastAPI: Server, Postman: Globe,
+};
+
+const categoryIcons = {
+  Code, Brain, BookOpen, Settings,
 };
 
 function SkillTile({ name, color }) {
@@ -91,7 +95,7 @@ export function Skills() {
         >
           <span className="section-label">/* skills */</span>
           <h2 className="section-title">Skills & Expertise</h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-sm">
+          <p className="text-gray-500 max-w-xl mx-auto text-base">
             Technical arsenal
           </p>
         </motion.div>
@@ -108,7 +112,7 @@ export function Skills() {
               className="glass rounded-xl p-6 hover-lift glow-cyan transition-all duration-300 group"
             >
               <div className="flex items-center gap-3 mb-6">
-                <span className="text-xl">{cat.icon}</span>
+                {(() => { const CatIcon = categoryIcons[cat.icon]; return CatIcon ? <CatIcon size={24} style={{ color: cat.color }} /> : null; })()}
                 <h3 className="text-base font-bold" style={{ color: cat.color }}>
                   {cat.title}
                 </h3>

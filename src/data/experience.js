@@ -3,13 +3,13 @@ export const experiences = [
   {
     role: "ML Engineer Intern",
     company: "Vithsuthra Technologies Pvt Ltd",
-    period: "March 2026 – Present",
+    period: "March 2026 – June 2026",
     tag: "VithAI",
     color: "#7A8A94",
     points: [
-      "Developing an AI powered Placement training assistant that provides personalized guidance to students based on their skills and goals",
+      "Developed an AI assisted QA analysis platform for customer care representative behaviour analysis",
       "Built automated data preprocessing workflows with Pandas, NumPy, and custom PyTorch Dataset classes",
-      "Created REST APIs with FastAPI to serve ML models, handling 10K+ daily inference requests",
+      "Created REST APIs with FastAPI to serve ML models",
     ],
   },
    {

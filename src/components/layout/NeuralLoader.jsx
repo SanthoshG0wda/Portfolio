@@ -433,7 +433,7 @@ export function NeuralLoader({ progress, loading, onComplete }) {
           >
             {phase < 4 && (
               <p
-                className="text-[10px] font-mono tracking-[0.4em] mb-2"
+                className="text-xs font-mono tracking-[0.4em] mb-2"
                 style={{ color: COLOR_HIGHLIGHT, opacity: 0.6 }}
               >
                 <TypingText text={statusText} />
@@ -466,7 +466,7 @@ export function NeuralLoader({ progress, loading, onComplete }) {
                     <motion.p
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="text-[9px] font-mono tracking-[0.3em] mt-2"
+                      className="text-[11px] font-mono tracking-[0.3em] mt-2"
                       style={{ color: COLOR_HIGHLIGHT, opacity: 0.4 }}
                     >
                       <TypingText text={`DECODING... ${Math.floor((dataPhase - 1) / 5 * 100)}%`} />
@@ -477,7 +477,7 @@ export function NeuralLoader({ progress, loading, onComplete }) {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.2 }}
-                      className="text-[9px] font-mono tracking-[0.3em] mt-2"
+                      className="text-[11px] font-mono tracking-[0.3em] mt-2"
                       style={{ color: COLOR_ACCENT, opacity: 0.5 }}
                     >
                       DECODED SUCCESSFULLY
@@ -490,7 +490,7 @@ export function NeuralLoader({ progress, loading, onComplete }) {
                   key="launch"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="text-[10px] font-mono tracking-[0.4em]"
+                  className="text-xs font-mono tracking-[0.4em]"
                   style={{ color: COLOR_HIGHLIGHT, opacity: 0.4 }}
                 >
                   LAUNCHING...

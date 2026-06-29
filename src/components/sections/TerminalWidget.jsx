@@ -76,7 +76,7 @@ export function TerminalWidget() {
             <div className="flex items-center justify-between px-4 py-2.5 border-b border-white/5 bg-white/[0.02]">
               <div className="flex items-center gap-2">
                 <Terminal size={12} className="text-[#3D6B8C]" />
-                <span className="text-[10px] text-gray-500 font-mono">
+                <span className="text-xs text-gray-500 font-mono">
                   terminal &mdash; ./ml-engineer.sh
                 </span>
               </div>
@@ -111,7 +111,7 @@ export function TerminalWidget() {
                 <motion.div
                   initial={{ opacity: 0, y: 4 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-gray-400 whitespace-pre-line mb-2 font-mono text-[11px] leading-relaxed"
+                  className="text-gray-400 whitespace-pre-line mb-2 font-mono text-xs leading-relaxed"
                 >
                   {output}
                 </motion.div>
@@ -121,7 +121,7 @@ export function TerminalWidget() {
                   onClick={nextCmd}
                   whileHover={{ scale: 1.05, x: 4 }}
                   whileTap={{ scale: 0.95 }}
-                  className="mt-2 text-[10px] text-gray-600 hover:text-[#3D6B8C] transition-colors font-mono"
+                  className="mt-2 text-xs text-gray-600 hover:text-[#3D6B8C] transition-colors font-mono"
                 >
                   {">"} Press to run next command...
                 </motion.button>
